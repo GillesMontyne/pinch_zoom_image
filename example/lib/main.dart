@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pos_pinch_zoom_image/pos_pinch_zoom_image.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 
 void main() => runApp(new MyApp());
 
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
               child: PinchZoomImage(
                 image: Image.asset('images/camel.jpg'),
                 zoomedBackgroundColor: Color.fromRGBO(240, 240, 240, 1.0),
-                hideStatusBarWhileZooming: true,
+                hideStatusBarWhileZooming: false,
                 onZoomStart: () {
                   print('Zoom started');
                 },
@@ -35,9 +34,7 @@ class MyApp extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(16.0),
               child: PinchZoomImage(
-                image: CachedNetworkImage(
-                  imageUrl: 'https://i.imgur.com/tKg0XEb.jpg',
-                ),
+                image: Image.network('https://i.imgur.com/tKg0XEb.jpg'),
                 zoomedBackgroundColor: Color.fromRGBO(240, 240, 240, 1.0),
               ),
             ),

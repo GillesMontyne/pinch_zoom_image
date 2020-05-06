@@ -1,9 +1,10 @@
 name: pos_pinch_zoom_image_example
 description: Demonstrates how to use the pinch_zoom_image plugin.
 publish_to: 'none'
+version: 0.0.1+1
 
 environment:
-  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+  sdk: ">=2.2.2 <3.0.0"
 
 dependencies:
   flutter:
@@ -14,7 +15,6 @@ dev_dependencies:
     sdk: flutter
   pos_pinch_zoom_image:
     path: ../
-  cached_network_image: ^0.8.0
 
 flutter:
   uses-material-design: true
